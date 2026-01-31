@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fuente predeterminada del sistema (sans-serif) */
+    font-family: sans-serif;
+    
+    /* Color base oscuro (#0F172A) */
+    background-color: #0F172A;
+    color: #E5E7EB; /* Texto gris claro para lectura */
+    
+    /* Fondo con manchas de color para el efecto cristal */
+    background-image: 
+        radial-gradient(circle at 15% 20%, #1E3A8A 0%, transparent 50%),
+        radial-gradient(circle at 85% 80%, #38BDF8 0%, transparent 50%);
+    background-attachment: fixed;
+    
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* --- Barra de Navegación "Glass" --- */
+nav {
+    position: sticky;
+    top: 20px;
+    
+    /* Efecto Cristal Simplificado */
+    background: rgba(255, 255, 255, 0.08); /* Blanco muy transparente */
+    backdrop-filter: blur(10px);           /* Desenfoque del fondo */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 40px;
+    
+    /* Centrado visual */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+/* Hover Blanco */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Blanco semitransparente */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Contenido --- */
+
+h1, h2 {
+    text-align: center;
+    color: #FFFFFF; /* Blanco puro */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding-bottom: 10px;
+    /* Truco para centrar el bloque inline del borde */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+    
+    /* Contenedor de cristal para el texto para que se lea bien */
+    background: rgba(15, 23, 42, 0.6); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+}
