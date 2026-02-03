@@ -1,3 +1,4 @@
+/* 1. Configuración Básica (Sin fuente personalizada) */
 * {
     margin: 0;
     padding: 0;
@@ -5,99 +6,103 @@
 }
 
 body {
-    /* Fuente predeterminada del sistema (sans-serif) */
-    font-family: sans-serif;
-    
-    /* Color base oscuro (#0F172A) */
-    background-color: #0F172A;
-    color: #E5E7EB; /* Texto gris claro para lectura */
-    
-    /* Fondo con manchas de color para el efecto cristal */
-    background-image: 
-        radial-gradient(circle at 15% 20%, #1E3A8A 0%, transparent 50%),
-        radial-gradient(circle at 85% 80%, #38BDF8 0%, transparent 50%);
-    background-attachment: fixed;
-    
-    padding: 20px;
+    /* Uso de fuentes nativas del sistema operativo para máxima velocidad y limpieza */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b; /* Texto gris azulado muy oscuro para buen contraste */
     min-height: 100vh;
+    
+    /* 2. Fondo con más textura y profundidad */
+    background-color: #f0f9ff; /* Base blanca ligeramente azulada */
+    background-image: 
+        /* Capa 1: Mancha azul profundo arriba izquierda */
+        radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.25) 0%, transparent 50%), 
+        /* Capa 2: Mancha cian vibrante abajo derecha */
+        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.30) 0%, transparent 50%),
+        /* Capa 3: Una mancha central más suave para unir todo */
+        radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    background-attachment: fixed;
+    background-size: 120% 120%; /* Un poco de zoom para suavizar */
 }
 
-/* --- Barra de Navegación "Glass" --- */
+/* 3. Barra de Navegación Oscura y Elegante */
 nav {
+    background-color: #0f172a; /* Azul noche muy oscuro */
+    padding: 1rem 2rem;
+    /* Sombra más pronunciada para separarlo del fondo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     position: sticky;
-    top: 20px;
-    
-    /* Efecto Cristal Simplificado */
-    background: rgba(255, 255, 255, 0.08); /* Blanco muy transparente */
-    backdrop-filter: blur(10px);           /* Desenfoque del fondo */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-    
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 40px;
-    
-    /* Centrado visual */
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil brillante */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-    gap: 15px;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
-    color: #FFFFFF;
-    padding: 8px 15px;
-    border-radius: 8px;
-    transition: background 0.3s ease;
+    color: rgba(255, 255, 255, 0.85); /* Blanco ligeramente apagado */
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px; /* Bordes más redondeados "estilo píldora" */
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
-/* Hover Blanco */
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Blanco semitransparente */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+/* Efecto Hover en Navbar */
+nav a:hover {
+    color: #ffffff; /* Blanco puro al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo blanco translúcido */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Pequeño resplandor */
+    transform: translateY(-1px);
 }
 
-/* --- Contenido --- */
-
+/* 4. Títulos */
 h1, h2 {
     text-align: center;
-    color: #FFFFFF; /* Blanco puro */
-    margin-bottom: 20px;
+    color: #1e3a8a; /* Mantenemos el azul corporativo para títulos */
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-top: 20px;
-}
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.2rem; }
 
-h2 {
-    font-size: 1.8rem;
-    margin-top: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: inline-block;
-    padding-bottom: 10px;
-    /* Truco para centrar el bloque inline del borde */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
+/* 5. Párrafos con "Liquid Glass" Mejorado */
 p {
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    line-height: 1.6;
+    /* Fondo: Blanco semi-transparente. Ajusta el 0.7 si lo quieres más o menos opaco */
+    background: rgba(255, 255, 255, 0.7); 
     
-    /* Contenedor de cristal para el texto para que se lea bien */
-    background: rgba(15, 23, 42, 0.6); /* Fondo oscuro semitransparente */
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 20px;
+    /* LA CLAVE DEL EFECTO LÍQUIDO:
+       Blur alto + Saturación. La saturación hace que los colores del fondo
+       se vean más vibrantes a través del cristal. */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    /* Bordes: Un borde blanco fino y nítido define el cristal */
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    
+    /* Sombras para volumen:
+       1. Sombra externa suave y oscura.
+       2. Sombra interna (inset) blanca para dar brillo en los bordes ("efecto mojado") */
+    box-shadow: 
+        0 10px 40px -10px rgba(31, 38, 135, 0.2),
+        inset 0 0 20px 2px rgba(255, 255, 255, 0.4); 
+        
+    border-radius: 24px; /* Esquinas más redondeadas */
+    
+    /* Espaciado y Texto */
+    padding: 35px;
+    max-width: 900px;
+    margin: 30px auto;
+    line-height: 1.9; /* Lectura muy cómoda */
+    font-size: 1.1rem;
+    color: #334155;
 }
