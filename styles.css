@@ -8,7 +8,7 @@
 body {
     /* Uso de fuentes nativas del sistema operativo para máxima velocidad y limpieza */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #1e293b; /* Texto gris azulado muy oscuro para buen contraste */
+    color: #0f172a; /* Texto gris azulado muy oscuro para buen contraste */
     min-height: 100vh;
     
     /* 2. Fondo con más textura y profundidad */
@@ -65,7 +65,7 @@ nav a:hover {
 /* 4. Títulos */
 h1, h2 {
     text-align: center;
-    color: #1e3a8a; /* Mantenemos el azul corporativo para títulos */
+    color: #0f172a; /* Mantenemos el azul corporativo para títulos */
     margin-top: 50px;
     margin-bottom: 25px;
     font-weight: 700;
