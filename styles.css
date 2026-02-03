@@ -1,4 +1,3 @@
-/* 1. Configuración Básica (Sin fuente personalizada) */
 * {
     margin: 0;
     padding: 0;
@@ -6,34 +5,26 @@
 }
 
 body {
-    /* Uso de fuentes nativas del sistema operativo para máxima velocidad y limpieza */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #0f172a; /* Texto gris azulado muy oscuro para buen contraste */
+    color: #0f172a;
     min-height: 100vh;
-    
-    /* 2. Fondo con más textura y profundidad */
-    background-color: #f0f9ff; /* Base blanca ligeramente azulada */
+    background-color: #f0f9ff;
     background-image: 
-        /* Capa 1: Mancha azul profundo arriba izquierda */
         radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.25) 0%, transparent 50%), 
-        /* Capa 2: Mancha cian vibrante abajo derecha */
         radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.30) 0%, transparent 50%),
-        /* Capa 3: Una mancha central más suave para unir todo */
         radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
     background-attachment: fixed;
-    background-size: 120% 120%; /* Un poco de zoom para suavizar */
+    background-size: 120% 120%;
 }
 
-/* 3. Barra de Navegación Oscura y Elegante */
 nav {
-    background-color: #0f172a; /* Azul noche muy oscuro */
+    background-color: #0f172a;
     padding: 1rem 2rem;
-    /* Sombra más pronunciada para separarlo del fondo */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil brillante */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav ul {
@@ -46,63 +37,51 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.85); /* Blanco ligeramente apagado */
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
     padding: 10px 20px;
-    border-radius: 30px; /* Bordes más redondeados "estilo píldora" */
+    border-radius: 30px;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
 }
 
-/* Efecto Hover en Navbar */
 nav a:hover {
-    color: #ffffff; /* Blanco puro al pasar el mouse */
-    background-color: rgba(255, 255, 255, 0.15); /* Fondo blanco translúcido */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Pequeño resplandor */
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     transform: translateY(-1px);
 }
 
-/* 4. Títulos */
 h1, h2 {
     text-align: center;
-    color: #0f172a; /* Mantenemos el azul corporativo para títulos */
+    color: #0f172a;
     margin-top: 50px;
     margin-bottom: 25px;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.2rem; }
+h1 {
+    font-size: 3.5rem;
+}
 
-/* 5. Párrafos con "Liquid Glass" Mejorado */
+h2 {
+    font-size: 2.2rem;
+}
+
 p {
-    /* Fondo: Blanco semi-transparente. Ajusta el 0.7 si lo quieres más o menos opaco */
-    background: rgba(255, 255, 255, 0.7); 
-    
-    /* LA CLAVE DEL EFECTO LÍQUIDO:
-       Blur alto + Saturación. La saturación hace que los colores del fondo
-       se vean más vibrantes a través del cristal. */
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    
-    /* Bordes: Un borde blanco fino y nítido define el cristal */
     border: 1px solid rgba(255, 255, 255, 0.95);
-    
-    /* Sombras para volumen:
-       1. Sombra externa suave y oscura.
-       2. Sombra interna (inset) blanca para dar brillo en los bordes ("efecto mojado") */
     box-shadow: 
         0 10px 40px -10px rgba(31, 38, 135, 0.2),
-        inset 0 0 20px 2px rgba(255, 255, 255, 0.4); 
-        
-    border-radius: 24px; /* Esquinas más redondeadas */
-    
-    /* Espaciado y Texto */
+        inset 0 0 20px 2px rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
     padding: 35px;
     max-width: 900px;
     margin: 30px auto;
-    line-height: 1.9; /* Lectura muy cómoda */
+    line-height: 1.9;
     font-size: 1.1rem;
     color: #334155;
 }
